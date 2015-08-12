@@ -1,5 +1,5 @@
-(defproject gardener "0.1.0"
-  :description "A utility belt for Garden, CSS in Clojurescript."
+(defproject facjure/gardener "0.1.0"
+  :description "A utility belt for Garden: CSS in Clojure/Clojurescript."
   :url "https://github.com/priyatam/gardener"
   :license {:name "Eclipse Public License" :url "http://www.eclipse.org/legal/epl-v10.html"}
   :min-lein-version "2.5.0"
@@ -7,8 +7,7 @@
 
   :dependencies                  [[org.clojure/clojure "1.7.0" :scope "provided"]
                                   [org.clojure/clojurescript "1.7.28" :scope "provided"]
-                                  [com.yahoo.platform.yui/yuicompressor "2.4.7"]
-                                  [garden "1.3.0-SNAPSHOT"]]
+                                  [garden "1.3.0"]]
 
   :npm
   {:dependencies                 [[source-map-support "0.3.1"]]}
