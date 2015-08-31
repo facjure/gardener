@@ -7,7 +7,7 @@
 
   :dependencies                  [[org.clojure/clojure "1.7.0" :scope "provided"]
                                   [org.clojure/clojurescript "1.7.28" :scope "provided"]
-                                  [garden "1.3.0"]]
+                                  [garden "1.3.0-SNAPSHOT"]]
 
   :npm
   {:dependencies                 [[source-map-support "0.3.1"]]}
@@ -18,8 +18,7 @@
   :profiles
   {:dev {:source-paths           ["src" "test" "dev"]
          :dependencies           [[criterium "0.4.1"]]
-         :plugins                 [[cider/cider-nrepl "0.9.1"]
-                                   [codox "0.8.13"]
+         :plugins                 [[codox "0.8.13"]
                                    [lein-npm "0.6.1"]
                                    [com.jakemccrary/lein-test-refresh "0.10.0"]]}}
 
