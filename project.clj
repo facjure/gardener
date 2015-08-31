@@ -1,4 +1,4 @@
-(defproject facjure/gardener "0.1.0"
+(defproject facjure/gardener "0.1.1-SNAPSHOT"
   :description "A utility belt for Garden: CSS in Clojure/Clojurescript."
   :url "https://github.com/priyatam/gardener"
   :license {:name "Eclipse Public License" :url "http://www.eclipse.org/legal/epl-v10.html"}
