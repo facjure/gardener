@@ -25,6 +25,7 @@ Run Cljs tests (on Node)
 
 ## Status
 
+This is a pure utility library, broken apart from [Mesh](https://github.com/facjure/mesh). Send a pull request if you're working on color, animation, and reusable mixins!
 
 ## License
 
