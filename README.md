@@ -1,11 +1,11 @@
 # Gardener
 
-A utility belt for [Garden](https://github.com/noprompt/garden).
+A Clojurescript sdk.
 
 ## Getting Started
 
-The following tasks (lein aliases) are available for contributors to develop
-and test Clj/Cljs locally:
+The following tasks (lein aliases) are available for contributors to develop and
+test Clj/Cljs locally:
 
 Build & Watch Cljs
 
@@ -27,10 +27,12 @@ Run Cljs tests (on Node)
 
 [![Clojars Project](http://clojars.org/facjure/gardener/latest-version.svg)](http://clojars.org/facjure/gardener)
 
-This is a pure utility library, broken apart from [Mesh](https://github.com/facjure/mesh). Send a pull request if you're working on color, animation, and reusable mixins!
+This is a tiny std library, broken apart from early drafts of
+[Mesh](https://github.com/facjure/mesh). I'm currently in early development, and
+not accepting Pull Requests.
 
 ## License
 
-Copyright © 2015 Facjure, LLC.
+Copyright © 2015-2016 Facjure, LLC.
 
 Released under the Eclipse Public License, same as Clojure.
