@@ -1,5 +1,4 @@
-(ns gardener.math
-  (:require [garden.core :refer [css]]))
+(ns gardener.math)
 
 #?(:clj
    (defn pow [base e]

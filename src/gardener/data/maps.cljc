@@ -4,7 +4,7 @@
     [clojure.set :as set]
     [clojure.string :as str]
     [clojure.walk :as w]
-    [gardener]
+    [gardener.data.seqs :as sq]
     [gardener.data.strings :as kstr]))
 
 (set! *warn-on-reflection* true)
