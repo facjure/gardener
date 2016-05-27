@@ -7,8 +7,8 @@
   :global-vars {*warn-on-reflection* true}
 
   :dependencies
-  [[org.clojure/clojure "1.8.0" :scope "provided"]
-   [org.clojure/clojurescript "1.8.51" :scope "provided"]]
+  [[org.clojure/clojure "1.9.0-alpha3" :scope "provided"]
+   [org.clojure/clojurescript "1.8.51"]]
 
   :npm
   {:dependencies [[source-map-support "0.3.1"]]}
