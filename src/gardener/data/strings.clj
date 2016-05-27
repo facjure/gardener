@@ -3,9 +3,9 @@
   (:require
     [clojure.string :as str])
   (:import
-    (java.net URLDecoder)
-    (java.nio ByteBuffer CharBuffer)
-    (java.nio.charset Charset CharsetDecoder CodingErrorAction)))
+   (java.net URLDecoder)
+   (java.nio ByteBuffer CharBuffer)
+   (java.nio.charset Charset CharsetDecoder CodingErrorAction)))
 
 ;;; String Functions
 

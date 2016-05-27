@@ -1,7 +1,5 @@
-(ns gardener.query.selectors
-  (:require
-   [clojure.edn :as edn]
-   [clojure.java.io :as io]))
+(ns gardener.query.selectors)
+ 
 
 (defprotocol Selector
   (-select [s m]))
@@ -18,6 +16,3 @@
     (into {}
           (for [[k s] sm]
             [k (select (get m k) s)]))))
-
-(defn load-data [f]
-  (edn/read-string (slurp (io/resource f))))

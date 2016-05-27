@@ -1,9 +1,4 @@
-(ns gardener.browser.history
-  (:require
-   [om.core :as om]
-   [om.dom :as dom]
-   [chant.state :refer [app-state]]
-   [sablono.core :as html :refer-macros [html]]))
+(ns gardener.browser.history)
 
 (def history
   (atom [@app-state]))

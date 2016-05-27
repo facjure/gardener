@@ -1,8 +1,7 @@
 (ns ^{:doc "Functions that operate on Clojure sequences."}
   gardener.data.seqs
   (:require
-    [clojure.walk :as walk]
-    [gardener.data.strings :as kstr]))
+    [clojure.walk :as walk]))
 
 (set! *warn-on-reflection* true)
 
@@ -25,7 +24,6 @@
               (count (filter #(matching-fn % string-to-match) search-terms))))
        (apply +)))
 
-(def count-matching-occurences (partial count-occurences kstr/safe-string-pattern-re-find))
 (def count-exact-occurences    (partial count-occurences =))
 
 (defn distinct-by

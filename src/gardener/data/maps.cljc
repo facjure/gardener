@@ -2,10 +2,12 @@
     gardener.data.maps
   (:require
     [clojure.set :as set]
-    [clojure.string :as str]
     [clojure.walk :as w]
-    [gardener.data.seqs :as sq]
-    [gardener.data.strings :as kstr]))
+    [gardener.data.seqs :as sq])
+  #?(:clj
+     (:require
+      [clojure.string :as str]
+      [gardener.data.strings :as kstr])))
 
 (set! *warn-on-reflection* true)
 
@@ -121,10 +123,10 @@
 (def assoc-if-not-nil
   (make-conditional-assoc-fn (fn [_m _k v]
                                (not= nil v))))
-
-(def assoc-if-not-blank
-  (make-conditional-assoc-fn (fn [_m _k v]
-                               (not (str/blank? v)))))
+#?(:clj
+   (def assoc-if-not-blank
+     (make-conditional-assoc-fn (fn [_m _k v]
+                                  (not (str/blank? v))))))
 
 (defn contains-path?
   "Whether the specified path exists in the map"
@@ -281,20 +283,23 @@
                  %)
               m))
 
-(defn keywords->hyphenated-keywords
-  "Transforms the keywords in map to hyphen seperated style"
-  [m]
-  (transform-keywords kstr/keyword->hyphenated-keyword m))
+#?(:clj
+   (defn keywords->hyphenated-keywords
+     "Transforms the keywords in map to hyphen seperated style"
+     [m]
+     (transform-keywords kstr/keyword->hyphenated-keyword m)))
 
-(defn keywords->underscored-keywords
-  "Transforms the keywords in map to underscore seperated style"
-  [m]
-  (transform-keywords kstr/keyword->underscored-keyword m))
+#?(:clj
+   (defn keywords->underscored-keywords
+     "Transforms the keywords in map to underscore seperated style"
+     [m]
+     (transform-keywords kstr/keyword->underscored-keyword m)))
 
-(defn keywords->underscored-strings
-  "Transforms the keywords in map to be underscored strings"
-  [m]
-  (transform-keywords kstr/keyword->underscored-string m))
+#?(:clj
+   (defn keywords->underscored-strings
+     "Transforms the keywords in map to be underscored strings"
+     [m]
+     (transform-keywords kstr/keyword->underscored-string m)))
 
 (defn update-in-if-present
   "Updates the specified path in the map only if it presents"

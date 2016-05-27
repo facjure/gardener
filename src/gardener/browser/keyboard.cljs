@@ -1,17 +1,9 @@
 (ns gardener.browser.keyboard
-  (:require-macros
-    [cljs.core.async.macros :refer [go]]
-    [clojure.core.match :refer [match]])
   (:require
     [goog.userAgent :as ua]
     [goog.events :as events]
     [goog.events.EventType]
-    [clojure.string :as string]
-    [cljs.core.match]
-    [cljs.core.async :refer [>! <! alts! chan sliding-buffer put! to-chan]]
-    [facjure.ui.dom :as dom]
-    [facjure.ui.utils :as h]
-    [facjure.ui.reactive :as r]))
+    [clojure.string :as string]))
 
 (def BACKSPACE 8)
 (def ENTER 13)
