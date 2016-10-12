@@ -5,7 +5,8 @@
   :min-lein-version "2.6.0"
   :global-vars {*warn-on-reflection* true}
   :dependencies [[org.clojure/clojure "1.9.0-alpha13" :scope "provided"]
-                 [org.clojure/clojurescript "1.9.229"]]
+                 [org.clojure/clojurescript "1.9.229"]
+                 [org.clojure/core.async "0.2.391"]]
   :npm {:dependencies [[source-map-support "0.4.3"]]}
   :clean-targets ^{:protect false} ["target"]
   :profiles {:dev {:source-paths ["src" "test" "dev"]
