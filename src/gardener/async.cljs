@@ -1,8 +1,8 @@
 (ns gardener.async
-  (:require-macros
-   [cljs.core.async.macros :refer [go go-loop]])
-  (:require
-   [cljs.core.async :as async :refer [<! >!]]))
+(:require-macros
+ [cljs.core.async.macros :as m :refer [go go-loop alt!]])
+(:require
+ [cljs.core.async :as async :refer [<! >!]]))
 
 ;; Utilities -----
 
