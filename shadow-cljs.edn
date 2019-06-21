@@ -1,0 +1,48 @@
+{:repositories {"central" {:url "https://maven.aliyun.com/nexus/content/groups/public/"}
+                "clojars" {:url "https://mirrors.ustc.edu.cn/clojars/"}}
+
+ :source-paths ["src" "dev-resources" "test"]
+
+ :dependencies [[org.clojure/core.incubator "0.1.4"]
+                [cumulo/util "0.1.4"]
+                ;; devtools
+                [binaryage/devtools "0.9.10"]
+                [cider/cider-nrepl "0.21.0"]
+                [karma-reporter "3.1.0"]]
+
+ :cache-blockers
+ #{cumulo-util.build}
+
+ :nrepl         {:port 8420
+                 ;;:init-ns user
+                 }
+
+ :builds        {:app
+                 {:target           :browser
+                  :output-dir       "resources/public/js/compiled"
+                  :asset-path       "/js/compiled"
+                  :modules          {:app {:init-fn gardener/init}}
+                  :compiler-options {:closure-defines  {re-frame.trace.trace-enabled? true}
+                                     :infer-externs :auto}
+                  :release          {:output-dir "dist/"
+                                     :build-options {:manifest-name "assets.edn"}
+                                     :compiler-options {:optimizations :simple}}}
+
+                 :browser-test
+                 {:target           :browser-test
+                  :ns-regexp        "-test$"
+                  :test-dir         "target/browser-test"
+                  :runner-ns        shadow.test.browser
+                  :compiler-options {:closure-defines {re-frame.trace.trace-enabled? true}}
+                  :devtools         {:http-root "target/browser-test"
+                                     :http-port 8081}}
+
+                 :node-test
+                 {:target           :node-test
+                  :ns-regexp        "test"
+                  :output-to        "target/node-test.js"}
+
+                 :karma-test
+                 {:target           :karma
+                  :ns-regexp        "-test$"
+                  :output-to        "target/karma/test.js"}}}

@@ -1,0 +1,35 @@
+{
+	"name": "gardener",
+	"version": "0.3.0",
+	"description": "a general purpose clojurescript sdk",
+	"author": "Priyatam Mudivarti",
+	"license": "Eclipse Public License 2.0",
+	"main": "index.js",
+	"devDependencies": {
+		"chokidar-cli": "^1.2.1",
+		"http-server": "^0.11.1",
+		"karma": "^3.1.4",
+		"karma-chrome-launcher": "^2.2.0",
+		"karma-cli": "^2.0.0",
+		"karma-cljs-test": "^0.1.0",
+		"karma-firefox-launcher": "^1.1.0",
+		"karma-htmlfile-reporter": "^0.3.8",
+		"karma-ie-launcher": "^1.0.0",
+		"karma-junit-reporter": "^1.2.0",
+		"karma-opera-launcher": "^1.0.0",
+		"karma-phantomjs-launcher": "^1.0.4",
+		"karma-safari-launcher": "^1.0.0",
+		"ncp": "^2.0.0",
+		"npm-run-all": "^4.1.5",
+		"phantomjs-prebuilt": "^2.1.16",
+		"shadow-cljs": "^2.7.14"
+	},
+	"scripts": {
+		"clean": "rm -r resources/public/js/*",
+		"compile": "shadow-cljs compile app",
+		"dev": "shadow-cljs watch app",
+		"test": "shadow-cljs compile karma-test && karma start --single-run",
+		"browser-test": "shadow-cljs watch browser-test",
+		"node-test": "shadow-cljs compile node-test && node target/node-test.js"
+	  }
+}
